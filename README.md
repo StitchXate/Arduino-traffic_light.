@@ -1,31 +1,45 @@
-// Define the digital pins for the traffic lights
-const int RED_LED = 4;
-const int YELLOW_LED = 3;
-const int GREEN_LED = 2;
+# Arduino Traffic Light
 
-void setup() {
-  // Configure the LED pins as outputs
-  pinMode(RED_LED, OUTPUT);
-  pinMode(YELLOW_LED, OUTPUT);
-  pinMode(GREEN_LED, OUTPUT);
-}
+A simple Arduino traffic light simulation using red, yellow, and green LEDs with programmed timing.
 
-void loop() {
-  // 1. GREEN LIGHT ON - 5 seconds
-  digitalWrite(GREEN_LED, HIGH);
-  digitalWrite(YELLOW_LED, LOW);
-  digitalWrite(RED_LED, LOW);
-  delay(5000);
+## Overview
 
-  // 2. YELLOW LIGHT ON - 2 seconds
-  digitalWrite(GREEN_LED, LOW);
-  digitalWrite(YELLOW_LED, HIGH);
-  digitalWrite(RED_LED, LOW);
-  delay(2000);
+This project demonstrates a basic traffic light system using an Arduino and three LEDs. The lights automatically change in sequence using programmed delays.
 
-  // 3. RED LIGHT ON - 5 seconds
-  digitalWrite(GREEN_LED, LOW);
-  digitalWrite(YELLOW_LED, LOW);
-  digitalWrite(RED_LED, HIGH);
-  delay(5000);
-}
+## Components
+
+- Arduino Uno
+- Red LED
+- Yellow LED
+- Green LED
+- Resistors
+- Breadboard
+- Jumper wires
+
+## Pin Connections
+
+| LED | Arduino Pin |
+|-----|-------------|
+| Red | 4 |
+| Yellow | 3 |
+| Green | 2 |
+
+## How It Works
+
+The Arduino controls three LEDs and changes them in a fixed sequence:
+
+1. Green light stays on for 5 seconds.
+2. Yellow light stays on for 2 seconds.
+3. Red light stays on for 5 seconds.
+4. The sequence repeats.
+
+## What I Learned
+
+- Using `pinMode()` and `digitalWrite()`
+- Controlling LEDs with an Arduino
+- Using [delay()] for timing
+- Understanding basic Arduino programming and digital outputs
+
+## Project Status
+
+Completed beginner Arduino project.
